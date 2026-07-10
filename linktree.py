@@ -20,7 +20,6 @@ import argparse
 # ----------------------------------------------------------------------------
 CONFIG = {
     "name": "Theoneste Ndahimana",
-    "handle": "@da_goatt263",                       # shown under the name
     "tagline": "Documenting an investing journey — markets, models, and the math behind them.",
     "monogram": "TN",                          # fallback avatar if no image
     "avatar_url": "",                          # optional: paste an image URL to use instead of the monogram
@@ -218,7 +217,7 @@ def main():
 
     html = TEMPLATE.format(
         NAME=CONFIG["name"],
-        HANDLE=CONFIG["handle"],
+        HANDLE=CONFIG.get("handle", ""),
         TAGLINE=CONFIG["tagline"],
         ACCENT=CONFIG["accent"],
         AVATAR=build_avatar(CONFIG),
